@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchView"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="ik" />
+
+    <TextView
+        android:layout_width="162dp"
+        android:layout_height="wrap_content"
+        android:text="Selecciona Pais:"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#19070B"
+        android:layout_marginTop="25dp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"></TableLayout>
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_gravity="center_horizontal"
+        android:clickable="true"
+        android:choiceMode="singleChoice"
+        android:textAlignment="center"
+        android:visibility="visible"
+        android:textFilterEnabled="false"
+        android:contextClickable="false"
+        android:layout_marginLeft="90dp"
+        android:layout_marginRight="85dp"
+        android:layout_marginTop="25dp" />
+    <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scrollView"
+    android:layout_gravity="right" /></LinearLayout>
+
