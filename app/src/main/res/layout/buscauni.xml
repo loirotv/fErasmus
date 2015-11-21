@@ -3,6 +3,25 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/colorPrimaryDark">
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="Busca Universidad"
+            android:textColor="#FFFFFF"
+            android:elegantTextHeight="false"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="5dp" />
+
+    </LinearLayout>
+
     <SearchView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -11,13 +30,14 @@
         android:contentDescription="ik" />
 
     <TextView
-        android:layout_width="162dp"
+        android:layout_width="234dp"
         android:layout_height="wrap_content"
         android:text="Selecciona Pais:"
         android:id="@+id/textView"
         android:layout_gravity="center_horizontal"
         android:textColor="#19070B"
-        android:layout_marginTop="25dp" />
+        android:layout_marginTop="25dp"
+        android:textSize="26dp" />
 
     <TableLayout
         android:layout_width="match_parent"
@@ -43,5 +63,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/scrollView"
-    android:layout_gravity="right" /></LinearLayout>
+    android:layout_gravity="right" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimaryDark">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Busca Universidad"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+</LinearLayout>
 

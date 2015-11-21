@@ -12,17 +12,19 @@
         android:layout_marginBottom="8dp" android:visibility="gone" />
 
     <Button android:id="@+id/email_sign_in_button" style="?android:textAppearanceSmall"
-        android:layout_width="260dp" android:layout_height="wrap_content"
-        android:layout_marginTop="130dp" android:text="INICIA SESION CON FACEBOOK"
+        android:layout_width="260dp" android:layout_height="60dp"
+        android:layout_marginTop="130dp"
+        android:background="@drawable/face"
         android:textStyle="bold" />
 
     <Button android:id="@+id/email_sign_in_button2" style="?android:textAppearanceSmall"
-        android:layout_width="260dp" android:layout_height="wrap_content"
-        android:layout_marginTop="16dp" android:text="INICIA SESION CON GOOGLE+"
+        android:layout_width="260dp" android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/google_logo"
         android:textStyle="bold" />
 
     <Button android:id="@+id/email_sign_in_button3" style="?android:textAppearanceSmall"
-        android:layout_width="260dp" android:layout_height="wrap_content"
+        android:layout_width="260dp" android:layout_height="55dp"
         android:layout_marginTop="16dp" android:text="MODO INVITADO"
         android:textStyle="bold" />
 

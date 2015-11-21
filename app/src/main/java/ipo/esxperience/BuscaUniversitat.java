@@ -9,6 +9,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
+import java.util.HashMap;
+
 /**
  * Created by GigiLasVegas on 20/11/2015.
  */
@@ -23,27 +25,34 @@ public class BuscaUniversitat extends Activity {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.select_dialog_item, listapaises);
         ListView paises = (ListView) findViewById(R.id.listView);
         paises.setAdapter(adapter);
+        final String[] listaunisEsp = new String[]{
+                "URV","UPC", "UAB"
+        };
+        String[] listaunisFra = new String[]{
+                "LaFont","Mipene", "Suchocho"
+        };
+        final HashMap<String, String[]> listapaisuniv = new HashMap();
+        listapaisuniv.put("España", listaunisEsp);
+        listapaisuniv.put("Francia",listaunisFra);
+        listapaisuniv.put("España",listaunisEsp);
         paises.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                Pais cargapais = new Pais();
+                Intent i = new Intent(BuscaUniversitat.this, Pais.class);
 
                 switch (position){
                     case 0:
-                        cargapais.setText("URV");
-                        cargapais.setText("URV");
-                        cargapais.setText("URV");
-                        cargapais.setText("URV");
-
-
+                        String[] string = listapaisuniv.get("España");
+                        i.putExtra("listaunis",listaunisEsp);
+                        startActivity(i);
                         break;
                     case 1:
                         //cargapais.putExtra("Universitat", "URV");
                         break;
                 }
-                //Intent i = new Intent(BuscaUniversitat.this, cargapais.getClass());
-               // startActivity(i);
+
+
             }
         });
 
