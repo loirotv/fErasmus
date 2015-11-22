@@ -26,21 +26,21 @@ public class BuscaUniversitat extends Activity {
         ListView paises = (ListView) findViewById(R.id.listView);
         paises.setAdapter(adapter);
         final String[] listaunisEsp = new String[]{
-                "URV","UPC", "UAB"
+                "URV","UPC", "UAB", "UOC", "UEM","UEX"
         };
         String[] listaunisFra = new String[]{
-                "LaFont","Mipene", "Suchocho"
+                "LaFont","Montpelliere", "Eiffel"
         };
         final HashMap<String, String[]> listapaisuniv = new HashMap();
         listapaisuniv.put("España", listaunisEsp);
         listapaisuniv.put("Francia",listaunisFra);
-        listapaisuniv.put("España",listaunisEsp);
+        listapaisuniv.put("España", listaunisEsp); // CHUS! aquí porque pones dos veces la lista de unis de España?? -Oriol
         paises.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 Intent i = new Intent(BuscaUniversitat.this, Pais.class);
-
+//AQUI NO ENTIENDO QUE ESTAS HACIENDO, HABRA Q HACER ESTO PARA CADA PAIS? DEBERIAMOS HACERLO MEJOR, CON HERENCIA O ALGO - Oriol
                 switch (position){
                     case 0:
                         String[] string = listapaisuniv.get("España");

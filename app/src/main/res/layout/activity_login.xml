@@ -20,7 +20,7 @@
     <Button android:id="@+id/email_sign_in_button2" style="?android:textAppearanceSmall"
         android:layout_width="260dp" android:layout_height="50dp"
         android:layout_marginTop="16dp"
-        android:background="@drawable/google_logo"
+        android:background="@drawable/btn_google_signin_light_normal_web"
         android:textStyle="bold" />
 
     <Button android:id="@+id/email_sign_in_button3" style="?android:textAppearanceSmall"
