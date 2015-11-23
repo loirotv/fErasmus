@@ -21,8 +21,8 @@ public class ListaUniversidades {
     public LinkedList<Universidad> listaUniversidades = new LinkedList<>();
 
     public ListaUniversidades() throws IOException {
-
-        CSVReader reader = new CSVReader(new FileReader("C://Users//GigiLasVegas//Desktop//URV//IPO//fErasmus//app//src//main//res//raw//universidades.txt"));
+       
+        CSVReader reader = new CSVReader(new FileReader(R.raw.universidadesgetAbsolutePath()));
         String datos[] = reader.readNext();
         while (datos != null) {
             listaUniversidades.add(new Universidad(
