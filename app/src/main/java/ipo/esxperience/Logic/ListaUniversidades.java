@@ -1,18 +1,9 @@
 package ipo.esxperience.Logic;
 
-import android.content.Context;
-import android.content.res.AssetManager;
-
-import com.opencsv.CSVReader;
-
-import java.io.FileReader;
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.Collections;
 import java.util.LinkedList;
-
-import ipo.esxperience.R;
 
 /**
  * Created by SANTANA on 22/11/2015.
@@ -20,11 +11,11 @@ import ipo.esxperience.R;
 public class ListaUniversidades {
     public LinkedList<Universidad> listaUniversidades = new LinkedList<>();
 
-    public ListaUniversidades() throws IOException {
-       
-        CSVReader reader = new CSVReader(new FileReader(R.raw.universidadesgetAbsolutePath()));
-        String datos[] = reader.readNext();
-        while (datos != null) {
+    public ListaUniversidades(BufferedReader bfu, BufferedReader bfo) throws IOException {
+        String s;
+        String[] datos;
+        while ((s = bfu.readLine()) != null) {
+            datos = s.split(",");
             listaUniversidades.add(new Universidad(
                     datos[0],
                     datos[1],
@@ -37,14 +28,11 @@ public class ListaUniversidades {
                     Boolean.parseBoolean(datos[8]),
                     Boolean.parseBoolean(datos[9]),
                     datos[10]));
-            datos = reader.readNext();
         }
 
-        reader = new CSVReader(new FileReader("C://Users//GigiLasVegas//Desktop//URV//IPO//fErasmus//app//src//main//res//raw//opiniones.txt"));
-        datos = reader.readNext();
-        while (datos != null) {
+        while ((s = bfo.readLine()) != null) {
+            datos = s.split(",");
             getUniversidad(datos[0]).addOpinion(datos[1], Integer.parseInt(datos[2]), datos[3]);
-            datos = reader.readNext();
         }
     }
 
@@ -83,13 +71,13 @@ public class ListaUniversidades {
     }
 
     /* Filtros para ordenar por nombre y por valoracion */
-   /* public void ordenarNombre(){
-        Collections.sort(listaUniversidades, (Universidad u1, Universidad u2) -> u1.nombre.toLowerCase().compareTo(u2.nombre.toLowerCase()));
+    public void ordenarNombre(){
+        Collections.sort(listaUniversidades, Universidad.porNombre);
     }
 
     public void ordenarValoracion(){
-        Collections.sort(listaUniversidades, (Universidad u1, Universidad u2) -> new Float (u1.getValoracion()).compareTo(new Float(u2.getValoracion())));
-    }*/
+        Collections.sort(listaUniversidades, Universidad.porValoracion);
+    }
 
     /* Obtiene los nombres de toda la lista */
     public String[] getNombres() {

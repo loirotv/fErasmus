@@ -2,6 +2,7 @@ package ipo.esxperience.Logic;
 
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
+import java.util.Comparator;
 import java.util.LinkedList;
 
 /**
@@ -67,5 +68,15 @@ public class Universidad {
         return "("+siglas+") "+nombre;
     }
 
+    public static Comparator<Universidad> porNombre = new Comparator<Universidad>() {
+        public int compare(Universidad s1, Universidad s2) {
+            return s1.nombre.toLowerCase().compareTo(s2.nombre.toLowerCase());
+        }
+    };
 
+    public static Comparator<Universidad> porValoracion = new Comparator<Universidad>() {
+        public int compare(Universidad s1, Universidad s2) {
+            return new Float(s1.getValoracion()).compareTo(new Float(s2.getValoracion()));
+        }
+    };
 }

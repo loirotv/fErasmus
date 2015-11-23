@@ -6,12 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListView;
 
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 import java.util.LinkedHashMap;
 
 import ipo.esxperience.Logic.ListaUniversidades;
@@ -21,6 +22,21 @@ import ipo.esxperience.Logic.ListaUniversidades;
  */
 public class BuscaUniversitat extends Activity {
     ListaUniversidades listaUniversidades;
+
+    public void leerTxt(ListaUniversidades lista) {
+        try {
+            InputStream raw = getResources().openRawResource(R.raw.universidades);
+            BufferedReader is = null;
+            is = new BufferedReader(new InputStreamReader(raw, "UTF8"));
+            InputStream raw2 = getResources().openRawResource(R.raw.opiniones);
+            BufferedReader is2 = new BufferedReader(new InputStreamReader(raw2, "UTF8"));
+            listaUniversidades = new ListaUniversidades(is, is2);
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.buscauni);
@@ -33,12 +49,7 @@ public class BuscaUniversitat extends Activity {
         final String[] listaunisEsp = new String[]{
                 "URV","UPC", "UAB", "UOC", "UEM","UEX"
         };
-        try {
-            listaUniversidades = new ListaUniversidades();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
+        leerTxt(listaUniversidades);
         String[] listaunisFra = new String[]{
                 "LaFont","Montpelliere", "Eiffel"
         };
