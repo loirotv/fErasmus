@@ -1,11 +1,18 @@
 package ipo.esxperience.Logic;
 
+import android.content.Context;
+import android.content.res.AssetManager;
+
 import com.opencsv.CSVReader;
 
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.Collections;
 import java.util.LinkedList;
+
+import ipo.esxperience.R;
 
 /**
  * Created by SANTANA on 22/11/2015.
@@ -13,8 +20,9 @@ import java.util.LinkedList;
 public class ListaUniversidades {
     public LinkedList<Universidad> listaUniversidades = new LinkedList<>();
 
-    public ListaUniversidades(String Universidades, String Opiniones) throws IOException {
-        CSVReader reader = new CSVReader(new FileReader(Universidades));
+    public ListaUniversidades() throws IOException {
+
+        CSVReader reader = new CSVReader(new FileReader("C://Users//GigiLasVegas//Desktop//URV//IPO//fErasmus//app//src//main//res//raw//universidades.txt"));
         String datos[] = reader.readNext();
         while (datos != null) {
             listaUniversidades.add(new Universidad(
@@ -32,7 +40,7 @@ public class ListaUniversidades {
             datos = reader.readNext();
         }
 
-        reader = new CSVReader(new FileReader(Opiniones));
+        reader = new CSVReader(new FileReader("C://Users//GigiLasVegas//Desktop//URV//IPO//fErasmus//app//src//main//res//raw//opiniones.txt"));
         datos = reader.readNext();
         while (datos != null) {
             getUniversidad(datos[0]).addOpinion(datos[1], Integer.parseInt(datos[2]), datos[3]);
