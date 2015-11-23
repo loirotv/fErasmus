@@ -1,0 +1,5 @@
+"Universitat Rovira i Virgili","URV","977123456","urv@urv.cat","urv.cat","Espana",true,true,true,true,"path"
+"D","URV","977123456","urv@urv.cat","urv.cat","Espana",true,true,true,true,"path"
+"B","URV","977123456","urv@urv.cat","urv.cat","Espana",true,true,true,true,"path"
+"A","URV","977123456","urv@urv.cat","urv.cat","Espana",true,true,true,true,"path"
+"C","URV","977123456","urv@urv.cat","urv.cat","Espana",true,true,true,true,"path"
