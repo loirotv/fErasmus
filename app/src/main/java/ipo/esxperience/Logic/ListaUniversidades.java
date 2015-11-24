@@ -88,10 +88,23 @@ public class ListaUniversidades {
         return lista;
     }
 
+    public String[] getNombres() {
+        String lista[] = new String[listaUniversidades.size()];
+        int i = 0;
+        for (Universidad u : listaUniversidades)
+            lista[i++] = u.nombre;
+        return lista;
+    }
+
     public Universidad getUniversidad(String nombre) {
         for (Universidad u : listaUniversidades)
             if (u.nombre.toLowerCase().equals(nombre.toLowerCase()))
                 return u;
+        return null;
+    }
+
+    public Universidad getUniversidad(int posicion) {
+        if (posicion < listaUniversidades.size()) return listaUniversidades.get(posicion);
         return null;
     }
 }
