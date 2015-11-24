@@ -1,17 +1,26 @@
 package ipo.esxperience;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+
+import ipo.esxperience.Logic.ListaUniversidades;
 
 /**
  * Created by OriolGarcia on 22/11/15.
@@ -27,7 +36,19 @@ public class Universitat extends Activity {
     float val;
     int numVal = 0;
 
-
+    // AÑADIR COMENTARIO
+/*
+    private void writeToFile(String usuario, int estrella, String opinion) {
+        try {
+            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(openFileOutput("opiniones.txt", Context.MODE_PRIVATE));
+            //outputStreamWriter.write(data);
+            // El sergio lo que quiere es que AQUI le hagamos universidad.addOpinion(usuario, estrella, opinion)
+            outputStreamWriter.close();
+        }
+        catch (IOException e) {
+            Log.e("Exception", "File write failed: " + e.toString());
+        }
+    }*/
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,8 +84,9 @@ public class Universitat extends Activity {
         rating.setRating(val);
         img.setImageResource(R.drawable.campus);
 
-
     }
+
+
     public void setText(String[] text){
         text=text;
     }

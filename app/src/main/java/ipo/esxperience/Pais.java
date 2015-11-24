@@ -65,7 +65,8 @@ public class Pais extends Activity{
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 Intent i = new Intent(Pais.this, Universitat.class);
-                
+
+                        //i.putExtra("universidad", listaUniversidades.buscarPais(paisactual).getUniversidad(position));
                         i.putExtra("name", listaUniversidades.buscarPais(paisactual).getUniversidad(position).nombre);
                         i.putExtra("siglas", listaUniversidades.buscarPais(paisactual).getUniversidad(position).siglas);
                         i.putExtra("tlf", listaUniversidades.buscarPais(paisactual).getUniversidad(position).telefono);
