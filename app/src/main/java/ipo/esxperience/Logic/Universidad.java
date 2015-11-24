@@ -36,10 +36,10 @@ public class Universidad {
         this.imagen = imagen;
     }
 
-    public void addOpinion(String usuario, int estrella, String texto, BufferedWriter bw) throws IOException {
+    public void addOpinion(String usuario, float estrella, String opinion){
         if (estrella < 0) estrella = 0;
         if (estrella > 5) estrella = 5;
-        listaOpiniones.add(new Opinion(usuario, estrella, texto));
+        listaOpiniones.add(new Opinion(usuario, estrella, opinion));
 
         //Calculamos la media
         this.valoracion = 0;
@@ -47,17 +47,7 @@ public class Universidad {
             valoracion += o.estrella;
         this.valoracion = this.valoracion / listaOpiniones.size();
 
-        /*
-        Esto debe ir fuera del programa, para crear el BW.
-        Es decir, necesitamos el equivalente en Android
 
-        File file = new File("txt/Opiniones.txt");
-        FileWriter fw = new FileWriter(file.getAbsoluteFile(), true);
-        BufferedWriter bw = new BufferedWriter(fw);
-        lista.getUniversidad("A").addOpinion("Yo",5,"Sexto try",bw);
-        bw.close();
-         */
-        if (bw != null) bw.write("\n"+this.nombre+","+usuario+","+estrella+","+texto);
     }
 
     public float getValoracion() {
@@ -102,8 +92,8 @@ public class Universidad {
         return lista;
     }
 
-    public int[] getValoraciones() {
-        int lista[] = new int[listaOpiniones.size()];
+    public float[] getValoraciones() {
+        float lista[] = new float[listaOpiniones.size()];
         int i = 0;
         for (Opinion o : listaOpiniones)
             lista[i++] = o.estrella;

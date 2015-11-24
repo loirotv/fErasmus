@@ -5,10 +5,10 @@ package ipo.esxperience.Logic;
  */
 public class Opinion {
     public String usuario;
-    public int estrella;
+    public float estrella;
     public String texto;
 
-    public Opinion(String usuario, int estrella, String texto) {
+    public Opinion(String usuario, float estrella, String texto) {
         this.usuario = usuario;
         this.estrella = estrella;
         this.texto = texto;

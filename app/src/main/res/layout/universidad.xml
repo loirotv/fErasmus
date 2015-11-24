@@ -78,25 +78,82 @@
                 android:layout_gravity="right|center_vertical" />
         </FrameLayout>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Comentarios:"
+            android:textStyle="bold"
+            android:id="@+id/textView5"
+            android:layout_marginTop="15dp" />
+
         <ListView
             android:layout_width="match_parent"
-            android:layout_height="140dp"
+            android:layout_height="130dp"
             android:id="@+id/listViewUni"
             android:layout_gravity="center_horizontal" />
 
-        <EditText
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:inputType="textMultiLine"
-            android:ems="10"
-            android:id="@+id/editText"
-            android:layout_gravity="center_horizontal"
-            android:allowUndo="true"
-            android:background="#81ddd7"
-            android:editable="false" />
+            android:layout_height="83dp"
+            android:layout_gravity="bottom|center_horizontal">
+
+            <EditText
+                android:layout_width="158dp"
+                android:layout_height="30dp"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/editText"
+                android:allowUndo="true"
+                android:background="#81ddd7"
+                android:editable="false"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="8dp" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:text="Enviar"
+                android:textStyle="italic"
+                android:id="@+id/button"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginBottom="2dp" />
+
+            <EditText
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText3"
+                android:allowUndo="true"
+                android:background="#81ddd7"
+                android:editable="false"
+                android:layout_gravity="center"
+                android:layout_marginLeft="32dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Comentario"
+                android:id="@+id/textView6"
+                android:layout_gravity="left|top"
+                android:layout_marginLeft="40dp"
+                android:layout_marginBottom="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Puntuacion"
+                android:id="@+id/textView7"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_marginLeft="32dp"
+                android:layout_marginBottom="5dp" />
+        </FrameLayout>
 
     </LinearLayout>
-
 
 
 </LinearLayout>
