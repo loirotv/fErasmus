@@ -46,8 +46,10 @@ public class LoginActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
         ImageView img = (ImageView) findViewById(imageView2);
         img.setImageResource(R.drawable.logoesperiencegrande);
+
         Button signinFace = (Button) this.findViewById(R.id.email_sign_in_button);
         Button signinGoogle = (Button) this.findViewById(R.id.email_sign_in_button2);
         Button Register = (Button) this.findViewById(R.id.email_sign_in_button3);
