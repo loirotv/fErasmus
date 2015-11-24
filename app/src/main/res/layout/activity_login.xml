@@ -11,9 +11,19 @@
         android:layout_width="wrap_content" android:layout_height="wrap_content"
         android:layout_marginBottom="8dp" android:visibility="gone" />
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="192dp">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/imageView2" />
+    </FrameLayout>
+
     <Button android:id="@+id/email_sign_in_button" style="?android:textAppearanceSmall"
         android:layout_width="260dp" android:layout_height="60dp"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/face"
         android:textStyle="bold" />
 

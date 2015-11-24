@@ -28,12 +28,14 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.content.Intent;
 import java.util.ArrayList;
 import java.util.List;
 
 import static android.Manifest.permission.READ_CONTACTS;
+import static ipo.esxperience.R.id.imageView2;
 
 /**
  * A login screen that offers login via email/password.
@@ -44,6 +46,8 @@ public class LoginActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        ImageView img = (ImageView) findViewById(imageView2);
+        img.setImageResource(R.drawable.logoesperiencegrande);
         Button signinFace = (Button) this.findViewById(R.id.email_sign_in_button);
         Button signinGoogle = (Button) this.findViewById(R.id.email_sign_in_button2);
         Button Register = (Button) this.findViewById(R.id.email_sign_in_button3);
