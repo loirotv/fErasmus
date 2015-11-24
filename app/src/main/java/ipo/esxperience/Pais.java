@@ -39,7 +39,7 @@ public class Pais extends Activity{
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 Intent i = new Intent(Pais.this, Universitat.class);
-//AQUI NO ENTIENDO QUE ESTAS HACIENDO, HABRA Q HACER ESTO PARA CADA PAIS? DEBERIAMOS HACERLO MEJOR, CON HERENCIA O ALGO - Oriol
+
                 switch (position) {
                     case 0:
                         i.putExtra("name", "Universitat Rovira Y mi POYA");
@@ -50,9 +50,6 @@ public class Pais extends Activity{
                         i.putExtra("val", 3.0);
                         i.putExtra("listaop", listaop);
                         //i.putExtra("listaunis", listapaisuniv.get("España"));
-
-
-
                         break;
                     case 1:
                         i.putExtra("name", "Universitat Rovira Y mi POYA");

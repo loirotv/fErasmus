@@ -80,7 +80,7 @@ public class ListaUniversidades {
     }
 
     /* Obtiene los nombres de toda la lista */
-    public String[] getNombres() {
+    public String[] getNombresCompletos() {
         String lista[] = new String[listaUniversidades.size()];
         int i = 0;
         for (Universidad u : listaUniversidades)
