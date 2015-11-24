@@ -42,9 +42,17 @@ public class Universitat extends Activity {
         web =intent.getStringExtra("web");
         val =bundle.getInt("val");
         listaopiniones = bundle.getStringArray("listaop");
+        String [] listaopinionesnombres = bundle.getStringArray("listaopn");
         setContentView(R.layout.universidad);
+        int i = 0;
+        String[] opiniones= new String[listaopiniones.length];
+        while(i<listaopiniones.length){
+            opiniones[i] = listaopinionesnombres[i] + "\n" + listaopiniones[i];
+            i++;
+        }
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.select_dialog_item, listaopiniones);
+        ArrayAdapter<String> adapter;
+        adapter = new ArrayAdapter<String>(this, android.R.layout.select_dialog_item, opiniones);
         ListView coments = (ListView) findViewById(R.id.listViewUni);
         coments.setAdapter(adapter);
 

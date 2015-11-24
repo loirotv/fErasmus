@@ -79,4 +79,28 @@ public class Universidad {
             return new Float(s1.getValoracion()).compareTo(new Float(s2.getValoracion()));
         }
     };
+
+    public String[] getUsuarios() {
+        String lista[] = new String[listaOpiniones.size()];
+        int i = 0;
+        for (Opinion o : listaOpiniones)
+            lista[i++] = o.usuario;
+        return lista;
+    }
+
+    public int[] getValoraciones() {
+        int lista[] = new int[listaOpiniones.size()];
+        int i = 0;
+        for (Opinion o : listaOpiniones)
+            lista[i++] = o.estrella;
+        return lista;
+    }
+
+    public String[] getTexto() {
+        String lista[] = new String[listaOpiniones.size()];
+        int i = 0;
+        for (Opinion o : listaOpiniones)
+            lista[i++] = o.texto;
+        return lista;
+    }
 }

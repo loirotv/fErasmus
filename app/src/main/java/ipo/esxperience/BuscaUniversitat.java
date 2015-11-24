@@ -3,6 +3,7 @@ package ipo.esxperience;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -16,9 +17,11 @@ import java.io.UnsupportedEncodingException;
 
 import ipo.esxperience.Logic.ListaUniversidades;
 
+
 /**
  * Created by GigiLasVegas on 20/11/2015.
  */
+
 public class BuscaUniversitat extends Activity {
     ListaUniversidades listaUniversidades;
 
@@ -41,10 +44,13 @@ public class BuscaUniversitat extends Activity {
         setContentView(R.layout.buscauni);
 
         final String[] listapaises = new String[]{
+                "Espana","Francia", "Rumania", "Italia", "Reino Unido"
+        };
+        final String[] listapaisesamostrar = new String[]{
                 "España","Francia", "Rumania", "Italia", "Reino Unido"
         };
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.select_dialog_item, listapaises);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.select_dialog_item, listapaisesamostrar);
         ListView paises = (ListView) findViewById(R.id.listView);
         paises.setAdapter(adapter);
 
@@ -56,23 +62,11 @@ public class BuscaUniversitat extends Activity {
 
                 Intent i = new Intent(BuscaUniversitat.this, Pais.class);
 
-                switch (position){
-                    case 0:
-                        i.putExtra("listaunis", listaUniversidades.buscarPais("Espana").getNombresCompletos());
-                        break;
-                    case 1:
-                        i.putExtra("listaunis", listaUniversidades.buscarPais("Francia").getNombresCompletos());
-                        break;
-                    case 2:
-                        i.putExtra("listaunis", listaUniversidades.buscarPais("Rumania").getNombresCompletos());
-                        break;
-                    case 3:
-                        i.putExtra("listaunis", listaUniversidades.buscarPais("Italia").getNombresCompletos());
-                        break;
-                    case 4:
-                        i.putExtra("listaunis", listaUniversidades.buscarPais("Reino Unido").getNombresCompletos());
-                        break;
-                }
+
+                        i.putExtra("listaunis", listaUniversidades.buscarPais(listapaises[position]).getNombresCompletos());
+                        //i.putExtra("listacompleta", (Parcelable) listaUniversidades);
+                        i.putExtra("paisactual",listapaises[position]);
+
 
                 startActivity(i);
 
