@@ -32,7 +32,7 @@ public class ListaUniversidades {
 
         while ((s = bfo.readLine()) != null) {
             datos = s.split(",");
-            getUniversidad(datos[0]).addOpinion(datos[1], Integer.parseInt(datos[2]), datos[3]);
+            getUniversidad(datos[0]).addOpinion(datos[1], Integer.parseInt(datos[2]), datos[3], null);
         }
     }
 

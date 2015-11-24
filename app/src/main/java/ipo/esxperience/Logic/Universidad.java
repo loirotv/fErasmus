@@ -1,5 +1,7 @@
 package ipo.esxperience.Logic;
 
+import java.io.BufferedWriter;
+import java.io.IOException;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.util.Comparator;
@@ -34,7 +36,7 @@ public class Universidad {
         this.imagen = imagen;
     }
 
-    public void addOpinion(String usuario, int estrella, String texto) {
+    public void addOpinion(String usuario, int estrella, String texto, BufferedWriter bw) throws IOException {
         if (estrella < 0) estrella = 0;
         if (estrella > 5) estrella = 5;
         listaOpiniones.add(new Opinion(usuario, estrella, texto));
@@ -44,6 +46,18 @@ public class Universidad {
         for (Opinion o : listaOpiniones)
             valoracion += o.estrella;
         this.valoracion = this.valoracion / listaOpiniones.size();
+
+        /*
+        Esto debe ir fuera del programa, para crear el BW.
+        Es decir, necesitamos el equivalente en Android
+
+        File file = new File("txt/Opiniones.txt");
+        FileWriter fw = new FileWriter(file.getAbsoluteFile(), true);
+        BufferedWriter bw = new BufferedWriter(fw);
+        lista.getUniversidad("A").addOpinion("Yo",5,"Sexto try",bw);
+        bw.close();
+         */
+        if (bw != null) bw.write("\n"+this.nombre+","+usuario+","+estrella+","+texto);
     }
 
     public float getValoracion() {
