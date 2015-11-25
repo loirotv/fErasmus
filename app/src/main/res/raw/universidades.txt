@@ -1,5 +1,34 @@
-Universitat Rovira i Virgili,URV,977123456,urv@urv.cat,urv.cat,Espana,true,true,true,true,path
-D,URV,977123456,urv@urv.cat,urv.cat,Espana,true,true,true,true,path
-B,URV,977123456,urv@urv.cat,urv.cat,Espana,true,true,true,true,path
-A,URV,977123456,urv@urv.cat,urv.cat,Espana,true,true,true,true,path
-C,URV,977123456,urv@urv.cat,urv.cat,Espana,true,true,true,true,path
+Universitat Rovira i Virgili,URV,902337878,info@urv.cat,www.urv.cat,Espana,true,true,true,true,imagen
+Universidad Autonoma de Barcelona,UAB,935811000,informacio@uab.es,www.uab.es,Espana,true,true,true,true,imagen
+Universidad de Barcelona,UB,934035417,comunicacio@ub.edu,www.ub.es,Espana,true,true,true,true,imagen
+Universidad Jaume I de Castellon,UJI,902337878,info@urv.cat,www.urv.cat,Espana,true,true,true,true,imagen
+Universidad de Jaen,UJA,902337878,info@urv.cat,www.urv.cat,Espana,true,true,true,true,imagen
+Universidad de La Laguna,ULL,902337878,info@urv.cat,www.urv.cat,Espana,true,true,true,true,imagen
+Universitat de les Illes Balears,UIB,902337878,info@urv.cat,www.urv.cat,Espana,true,true,true,true,imagen
+Universidad de Leon,ULE,902337878,info@urv.cat,www.urv.cat,Espana,true,true,true,true,imagen
+Universidad de Lleida,UDL,902337878,info@urv.cat,www.urv.cat,Espana,true,true,true,true,imagen
+Universidad Loyola Andalucia,ULA,902337878,info@urv.cat,www.urv.cat,Espana,true,true,true,true,imagen
+Universidad Miguel Hernandez de Elche,UMH,902337878,info@urv.cat,www.urv.cat,Espana,true,true,true,true,imagen
+Mondragon Unibertsitatea,UMON,902337878,info@urv.cat,www.urv.cat,Espana,true,true,true,true,imagen
+Universidad de Murcia,UMU,902337878,info@urv.cat,www.urv.cat,Espana,true,true,true,true,imagen
+Universidad de Malaga,UMA,902337878,info@urv.cat,www.urv.cat,Espana,true,true,true,true,imagen
+Universidad Nacional de Educacion a Distancia,UNED,902337878,info@urv.cat,www.urv.cat,Espana,true,true,true,true,imagen
+ecole Superieure des Sciences Commerciales d’Angers,ESSCA,902337878,info@urv.cat,www.urv.cat,Francia,true,true,true,true,imagen
+Universite d'Orleans,UO,902337878,info@urv.cat,www.urv.cat,Francia,true,true,true,true,imagen
+Universite de Maine,UM,902337878,info@urv.cat,www.urv.cat,Francia,true,true,true,true,imagen
+Universite Lumiere Lyon 2,ULLII,902337878,info@urv.cat,www.urv.cat,Francia,true,true,true,true,imagen
+Universidad Alexandru Ioan Cuza,UAIC,902337878,info@urv.cat,www.urv.cat,Rumania,true,true,true,true,imagen
+Universidad de Bucarest,UB,902337878,info@urv.cat,www.urv.cat,Rumania,true,true,true,true,imagen
+Universidad de Milan,UM,902337878,info@urv.cat,www.urv.cat,Italia,true,true,true,true,imagen
+Universidad de Pisa,UP,902337878,info@urv.cat,www.urv.cat,Italia,true,true,true,true,imagen
+Universita degli studi di Roma La Sapienza,URS,902337878,info@urv.cat,www.urv.cat,Italia,true,true,true,true,imagen
+Cambridge University,CU,902337878,info@urv.cat,www.urv.cat,Reino Unido,true,true,true,true,imagen
+Oxford University,OU,902337878,info@urv.cat,www.urv.cat,Reino Unido,true,true,true,true,imagen
+St Andrews University,SAU,902337878,info@urv.cat,www.urv.cat,Reino Unido,true,true,true,true,imagen
+Surrey University,SU,902337878,info@urv.cat,www.urv.cat,Reino Unido,true,true,true,true,imagen
+Bath University,BU,902337878,info@urv.cat,www.urv.cat,Reino Unido,true,true,true,true,imagen
+Durham University,DU,902337878,info@urv.cat,www.urv.cat,Reino Unido,true,true,true,true,imagen
+Warwick University,WU,902337878,info@urv.cat,www.urv.cat,Reino Unido,true,true,true,true,imagen
+London Imperial College,LIC,902337878,info@urv.cat,www.urv.cat,Reino Unido,true,true,true,true,imagen
+Exeter University,EU,902337878,info@urv.cat,www.urv.cat,Reino Unido,true,true,true,true,imagen
+Lancaster University,LU,902337878,info@urv.cat,www.urv.cat,Reino Unido,true,true,true,true,imagen
