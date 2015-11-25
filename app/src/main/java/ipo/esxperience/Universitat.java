@@ -17,6 +17,8 @@ import android.widget.ListView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -112,24 +114,26 @@ public class Universitat extends Activity {
         leerTxt(listaUniversidades);
         ImageView img = (ImageView) findViewById(R.id.imageView);
         TextView nom = (TextView) findViewById(R.id.TextViewUni);
+        TextView correo = (TextView) findViewById(R.id.textView2);
         TextView tel = (TextView) findViewById(R.id.textView3);
         TextView webid = (TextView) findViewById(R.id.textView4);
         rating = (RatingBar) findViewById(R.id.ratingBar);
         nom.setText(name);
         tel.setText(tlf);
         webid.setText(web);
+        correo.setText(email);
         uni = listaUniversidades.getUniversidad(name);
         rating.setRating(uni.getValoracion());
         img.setImageResource(R.drawable.campus);
         Button enviar = (Button) findViewById(R.id.button);
-        et = (EditText) findViewById(R.id.editText);
-        et2 = (EditText) findViewById(R.id.editText3);
+       // et = (EditText) findViewById(R.id.editText);
+       // et2 = (EditText) findViewById(R.id.editText3);
 
         enviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                opinion = et.getText().toString();
+              /*  opinion = et.getText().toString();
                 valoracion =Float.parseFloat(et2.getText().toString());
                 uni.addOpinion("Anonimo", valoracion, opinion);
                 coments = (ListView) findViewById(R.id.listViewUni);
@@ -137,7 +141,7 @@ public class Universitat extends Activity {
                 coments.setAdapter(adapter);
                 et.setText("");
                 et2.setText("");
-                rating.setRating(uni.getValoracion());
+                rating.setRating(uni.getValoracion());*/
                 //writeToFile(name,null,3,opinion);
 
 
